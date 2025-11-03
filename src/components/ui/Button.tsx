@@ -1,13 +1,14 @@
 import React, { ReactNode } from "react";
 
 type ButtonProps = {
-  children: string;
+  children: React.ReactNode;
   className?: ReactNode;
   varient?: string;
 };
 
 function Button({ children, className, varient }: ButtonProps) {
-  const neutral: string = "bg-transparent text-black bg-white outline outline-1";
+  const neutral: string =
+    "bg-transparent text-[#049B3D] bg-white outline outline-1";
   const gray: string = "bg-[#E9E9E9] text-white";
   const lightGreen: string =
     "bg-[#E6F5EC] text-[#049B3D] border border-[#0066271A]";

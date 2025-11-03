@@ -11,6 +11,7 @@ function CommunityForm() {
         style={{
           backgroundImage: `url(${assets.images.field.src})`,
           backgroundSize: "cover",
+          backgroundPositionY: '-300px',
         }}
       >
         <div className="absolute inset-0 bg-[#012D12] opacity-70"></div>
@@ -25,7 +26,7 @@ function CommunityForm() {
             </p>
           </div>
           <form
-            className="p-3 md:p-6 backdrop-blur-md flex-1 flex rounded-2xl gap-3 bg-white/30"
+            className="p-2 md:p-3 backdrop-blur-md flex-1 flex rounded-full gap-1 bg-white/10"
             action=""
           >
             <div className="bg-white rounded-full w-full flex items-center p-3 gap-3">
@@ -34,7 +35,7 @@ function CommunityForm() {
                 type="email"
                 name=""
                 placeholder="Enter email address"
-                className=" w-full placeholder:text-[#A4A4A4] "
+                className=" w-full placeholder:text-[#A4A4A4] outline-none"
                 id=""
               />
             </div>

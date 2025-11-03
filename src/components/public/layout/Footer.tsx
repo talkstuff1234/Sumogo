@@ -8,7 +8,7 @@ import logo from "@/assets/images/logo.png";
 
 function Footer() {
   return (
-    <footer className="bg-white text-center py-10 px-5">
+    <footer className="bg-white text-center py-10 px-5" id="contact">
       <div className="flex justify-center mb-4">
         <Image
           src={logo} 
