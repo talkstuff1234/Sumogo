@@ -51,7 +51,7 @@ function Navbar() {
               <a
                 href={link.href}
                 onClick={(e) => handleScroll(e, link.href)}
-                className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
+                className="text-gray-800 hover:text-green-700 transition-colors duration-200"
               >
                 {link.name}
               </a>
@@ -64,7 +64,7 @@ function Navbar() {
           <a
             href="#contact"
             onClick={(e) => handleScroll(e, "#contact")}
-            className="bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-2 rounded-full transition-all duration-200"
+            className="bg-green-600 hover:bg-green-700 text-white font-medium p-6 h-12 flex items-center justify-center rounded-full transition-all duration-200"
           >
             Contact Us
           </a>

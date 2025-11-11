@@ -8,7 +8,10 @@ import * as motion from "motion/react-client";
 
 function Sustainability() {
   return (
-    <section className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden" id="products">
+    <section
+      className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden"
+      id="products"
+    >
       {/* Main container */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -41,7 +44,7 @@ function Sustainability() {
           viewport={{ once: true }}
           className="flex-1 flex flex-col gap-3 items-center md:items-start"
         >
-          <Button>Sustainability & Quality</Button>
+          <Button className="py-2 px-3.5">Sustainability & Quality</Button>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -78,7 +81,7 @@ function Sustainability() {
             transition={{ duration: 0.7, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <Button varient="green">
+            <Button varient="green" className="py-2 px-3.5">
               Our Mission{" "}
               <i className="bx text-white bx-arrow-down-stroke text-2xl"></i>
             </Button>

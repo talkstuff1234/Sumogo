@@ -40,7 +40,9 @@ function Vision() {
           viewport={{ once: true }}
           className="flex-1 flex flex-col gap-3 items-center md:items-start"
         >
-          <Button>Our Vision</Button>
+          <Button className="py-3 px-3 h-6 flex items-center justify-center">
+            Our Vision
+          </Button>
           <h1 className="text-[#002E12] text-3xl font-semibold text-center md:text-left">
             Leading Africa’s <span className="text-[#036D2B]">Agro-Export</span>{" "}
             Future

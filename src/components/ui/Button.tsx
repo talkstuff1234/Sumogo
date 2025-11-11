@@ -27,7 +27,7 @@ function Button({ children, className, varient }: ButtonProps) {
   }
 
   return (
-    <button className={`py-2 px-4 rounded-full ${varientColor} ${className}`}>
+    <button className={` rounded-full ${varientColor} ${className}`}>
       {children}
     </button>
   );

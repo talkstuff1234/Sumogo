@@ -23,7 +23,9 @@ function Partner() {
             Sumogo delivers premium dried fruits to retailers, distributors, and
             global partners offering consistent quality and trusted supply.
           </p>
-          <Button className="outline-none">Partner With Us</Button>
+          <Button className="outline-none py-3 px-3 h-12 flex items-center justify-center">
+            Partner With Us
+          </Button>
         </div>
       </div>
     </section>

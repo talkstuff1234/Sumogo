@@ -63,7 +63,7 @@ function Invest() {
             Why Invest in Sumogo
           </h1>
 
-          <div className="w-full flex flex-col gap-3">
+          <div className="w-full flex flex-col mt-10 gap-3">
             {[
               {
                 icon: assets.icons.factory,

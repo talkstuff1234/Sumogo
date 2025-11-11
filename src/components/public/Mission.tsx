@@ -38,9 +38,11 @@ function Mission() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex-1 flex flex-col gap-3 items-center md:items-start"
+          className="flex-1 flex flex-col gap-5 items-center md:items-start"
         >
-          <Button>Our Mission</Button>
+          <Button className="py-3 px-3 h-6 flex items-center justify-center">
+            Our Mission
+          </Button>
           <h1 className="text-[#002E12] text-3xl font-semibold text-center md:text-left">
             Sustainability. <span className="text-[#036D2B]">Innovation.</span>{" "}
             Reliability
@@ -65,7 +67,10 @@ function Mission() {
               audience and every farmer deserves a fair reward.
             </p>
           </motion.div>
-          <Button varient="green">
+          <Button
+            varient="green"
+            className="p-6 h-12 flex items-center justify-center"
+          >
             Our Vision{" "}
             <i className="bx text-white bx-arrow-down-stroke text-2xl"></i>
           </Button>

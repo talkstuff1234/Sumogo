@@ -56,7 +56,7 @@ function Export() {
                   delay: index * 0.15,
                 }}
                 viewport={{ once: true }}
-                className="p-4 rounded-lg border bg-[#FCFCFC] border-[#EFEFF3]"
+                className="p-4 rounded-md border bg-[#FCFCFC] border-[#EFEFF3]"
               >
                 <Image
                   src={item.icon}
@@ -79,9 +79,11 @@ function Export() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex-1 flex flex-col gap-3 items-center md:items-start"
+          className="flex-1 flex flex-col gap-5 items-center md:items-start"
         >
-          <Button>Export & Investor Relations</Button>
+          <Button className="py-3 px-3 h-6 flex items-center justify-center">
+            Export & Investor Relations
+          </Button>
           <h1 className="text-[#002E12] text-3xl font-semibold text-center md:text-left">
             Licensed. Reliable. Global
           </h1>
@@ -105,7 +107,10 @@ function Export() {
               produce.
             </p>
           </motion.div>
-          <Button varient="green">
+          <Button
+            varient="green"
+            className="py-3 px-3 h-12 flex items-center justify-center"
+          >
             Our Mission{" "}
             <i className="bx text-white bx-arrow-down-stroke text-2xl"></i>
           </Button>

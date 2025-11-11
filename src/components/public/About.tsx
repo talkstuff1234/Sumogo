@@ -8,7 +8,10 @@ import * as motion from "motion/react-client";
 
 function About() {
   return (
-    <section className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden" id="about">
+    <section
+      className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden"
+      id="about"
+    >
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,20 +41,25 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex-1 flex flex-col gap-3 items-center md:items-start"
+          className="flex-1 flex flex-col gap-6 items-center md:items-start"
         >
-          <Button>About Us</Button>
+          <Button className="outline py-3 px-3 h-6 flex items-center justify-center">
+            About Us
+          </Button>
           <h1 className="text-[#002E12] text-3xl font-semibold text-center md:text-left">
             Get to Know Sumogo
           </h1>
-          <p className="text-center md:text-left">
+          <p className="text-center md:text-left text-[#474747]">
             Sumogo Ltd is a holistic fresh, dried, and frozen food processing
             company dedicated to delivering Africa’s natural bounty to the
             world. We specialize in the sourcing, preservation, and export of
             fresh tropical fruits, dried and frozen fruits, spices, nuts, and
             culinary ingredients such as onions and ginger.
           </p>
-          <Button varient="green">
+          <Button
+            varient="green"
+            className="p-6 h-12 flex items-center justify-center"
+          >
             Our Mission{" "}
             <i className="bx text-white bx-arrow-down-stroke text-2xl"></i>
           </Button>

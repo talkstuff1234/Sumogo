@@ -8,7 +8,9 @@ function Hero() {
       <div className="w-full bg-white px-5 pt-16 max-w-[1200px] flex flex-col items-center mx-auto">
         <div className="w-full max-w-[800px]">
           <div className="flex flex-col items-center">
-            <Button className="outline py-2">Natures Best, Exported</Button>
+            <Button className="outline py-3 px-3 h-6 flex items-center justify-center">
+              Natures Best, Exported
+            </Button>
             <h1 className="text-textTitle font-semibold text-2xl md:text-3xl lg:text-5xl py-2 text-center">
               From <span className="text-[#036D2B]">Nigerian Farmlands</span> to
               Tables Around the World.
@@ -19,9 +21,16 @@ function Hero() {
               frozen foods, spices, and nuts from tropical fruits to essential
               ingredients like onions and ginger for global markets
             </p>
-            <div className="py-2 flex gap-3">
-              <Button varient="green">Explore Our Products</Button>
-              <Button>Partner With Us</Button>
+            <div className="py-2 flex flex-col md:flex-row gap-3">
+              <Button
+                varient="green"
+                className="p-6 h-12 flex items-center justify-center"
+              >
+                Explore Our Products
+              </Button>
+              <Button className="p-6 h-12 flex items-center justify-center text-[#474747]">
+                Partner With Us
+              </Button>
             </div>
           </div>
         </div>
@@ -31,7 +40,13 @@ function Hero() {
           <FruitsSlider />
         </div>
       </div>
-      <div className="bg-darkGreen w-full h-36 md:h-46"></div>
+      <div className="bg-darkGreen w-[80%] rounded-2xl mx-auto p-6  -mt-10 relative z-10">
+        <p className="text-white text-center">
+          Our commitment to quality, sustainability, and traceability ensures
+          that every product — fresh or dried — meets international standards
+          and nourishes homes across continents.
+        </p>
+      </div>
     </section>
   );
 }
