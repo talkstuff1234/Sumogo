@@ -19,7 +19,6 @@ export default function Home() {
       <Export/>
       <Invest/>
       <Sustainability/>
-      <CommunityForm />
     </>
   );
 }

@@ -3,15 +3,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "@/assets/images/logo.png";
+import Link from "next/link";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const links = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Our Products", href: "#products" },
-  ];
 
   const handleScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -46,17 +41,36 @@ function Navbar() {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center justify-center gap-8">
-          {links.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-                className="text-gray-800 hover:text-green-700 transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a
+              href="#home"
+              onClick={(e) => handleScroll(e, "#home")}
+              className="text-gray-800 hover:text-green-700 transition-colors duration-200"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              onClick={(e) => handleScroll(e, "#about")}
+              className="text-gray-800 hover:text-green-700 transition-colors duration-200"
+            >
+              About Us
+            </a>
+          </li>
+          <Link
+            href="/products"
+            className="text-gray-800 hover:text-green-700 transition-colors duration-200"
+          >
+            {/* <a
+              href="/products"
+              onClick={(e) => handleScroll(e, "/products")}
+              className="text-gray-800 hover:text-green-700 transition-colors duration-200"
+            >
+            </a> */}
+              Our Products
+          </Link>
         </ul>
 
         {/* Contact Button */}
@@ -86,17 +100,33 @@ function Navbar() {
         }`}
       >
         <ul className="flex flex-col items-center gap-4 py-4">
-          {links.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-                className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a
+              href="#home"
+              onClick={(e) => handleScroll(e, "#home")}
+              className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              onClick={(e) => handleScroll(e, "#about")}
+              className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="/products"
+              onClick={(e) => handleScroll(e, "/products")}
+              className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
+            >
+              Our Products
+            </a>
+          </li>
           <li>
             <a
               href="#contact"

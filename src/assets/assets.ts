@@ -20,6 +20,21 @@ import fruitFour from "@/assets/images/fruit4.jpg";
 import fruitFive from "@/assets/images/fruit5.jpg";
 import fruitSix from "@/assets/images/fruit6.jpg";
 import fruitSeven from "@/assets/images/fruit7.jpg";
+import food1 from "@/assets/images/food-1.jpg";
+import food2 from "@/assets/images/food-2.jpg";
+import food3 from "@/assets/images/food-3.jpg";
+import food4 from "@/assets/images/food-4.jpg";
+import food5 from "@/assets/images/food-5.jpg";
+import food6 from "@/assets/images/food-6.jpg";
+import food7 from "@/assets/images/food-7.jpg";
+import food8 from "@/assets/images/food-8.jpg";
+import food9 from "@/assets/images/food-9.jpg";
+import food10 from "@/assets/images/food-10.jpg";
+import food11 from "@/assets/images/food-11.jpg";
+import food12 from "@/assets/images/food-12.jpg";
+import food13 from "@/assets/images/food-13.jpg";
+import food14 from "@/assets/images/food-14.jpg";
+import food15 from "@/assets/images/food-15.jpg";
 
 //icons
 import building from "@/assets/icons/building-05.png";
@@ -61,6 +76,21 @@ export const assets = {
     fruitFive,
     fruitSix,
     fruitSeven,
+    food1,
+    food2,
+    food3,
+    food4,
+    food5,
+    food6,
+    food7,
+    food8,
+    food9,
+    food10,
+    food11,
+    food12,
+    food13,
+    food14,
+    food15,
   },
   icons: {
     hamburger: "/icons/hamburger.svg",
