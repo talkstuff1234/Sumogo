@@ -17,7 +17,7 @@ function CommunityForm() {
         <div className="absolute inset-0 bg-[#012D12] opacity-70"></div>
         <div className="relative z-10 flex flex-col lg:flex-row gap-3">
           <div className="flex-1">
-            <h1 className="text-white text-3xl font-semibold">
+            <h1 className="text-white text-xl  md:text-3xl font-semibold">
               Stay Fresh with Sumogo
             </h1>
             <p className="text-white">
@@ -29,7 +29,7 @@ function CommunityForm() {
             className="p-2 md:p-3 backdrop-blur-md flex-1 flex rounded-full gap-1 bg-white/10"
             action=""
           >
-            <div className="bg-white rounded-full w-full flex items-center p-3 gap-3">
+            <div className="bg-white rounded-full w-full flex items-center p-1 md:p-3 gap-3">
               <Image src={assets.icons.mail} width={20} height={20} alt="alt" className="mt-1"/>
               <input 
                 type="email"
@@ -39,7 +39,7 @@ function CommunityForm() {
                 id=""
               />
             </div>
-            <Button varient="green">Subscribe</Button>
+            <Button varient="green" className='px-3'>Subscribe</Button>
           </form>
         </div>
       </div>

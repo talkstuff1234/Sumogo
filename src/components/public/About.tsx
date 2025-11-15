@@ -9,9 +9,12 @@ import * as motion from "motion/react-client";
 function About() {
   return (
     <section
-      className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden"
+      className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden relative"
       id="about"
     >
+      <div className="w-[85px] h-[800px] rotate-24 -translate-y-50 bg-[#E9F7EF] absolute left-[85%]"></div>
+      <div className="w-[85px] h-[800px] rotate-24 -translate-y-50 bg-[#E9F7EF] absolute left-[95%]"></div>
+
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +44,7 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex-1 flex flex-col gap-6 items-center md:items-start"
+          className="flex-1 flex flex-col gap-6 items-center md:items-start z-10"
         >
           <Button className="outline py-3 px-3 h-6 flex items-center justify-center">
             About Us
@@ -58,10 +61,16 @@ function About() {
           </p>
           <Button
             varient="green"
-            className="p-6 h-12 flex items-center justify-center"
+            className="p-6 h-12 flex gap-2 items-center justify-center"
           >
             Our Mission{" "}
-            <i className="bx text-white bx-arrow-down-stroke text-2xl"></i>
+            <Image
+              src={assets.icons.arrowDown}
+              alt="arrow"
+              width={20}
+              height={20}
+              className="object-fit"
+            />
           </Button>
         </motion.div>
       </motion.div>

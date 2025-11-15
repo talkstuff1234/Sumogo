@@ -40,11 +40,11 @@ function Hero() {
           <FruitsSlider />
         </div>
       </div>
-      <div className="bg-darkGreen w-[80%] rounded-2xl mx-auto p-6  -mt-10 relative z-10">
+      <div className="bg-darkGreen md:w-[80%] rounded-2xl mx-5 md:mx-auto p-6  -mt-16 relative z-10">
         <p className="text-white text-center">
           Our commitment to quality, sustainability, and traceability ensures
-          that every product — fresh or dried — meets international standards
-          and nourishes homes across continents.
+          that every product fresh or dried meets international standards and
+          nourishes homes across continents.
         </p>
       </div>
     </section>

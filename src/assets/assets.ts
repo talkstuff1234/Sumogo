@@ -35,6 +35,7 @@ import food12 from "@/assets/images/food-12.jpg";
 import food13 from "@/assets/images/food-13.jpg";
 import food14 from "@/assets/images/food-14.jpg";
 import food15 from "@/assets/images/food-15.jpg";
+import map from "@/assets/images/map.svg";
 
 //icons
 import building from "@/assets/icons/building-05.png";
@@ -52,6 +53,10 @@ import factory from "@/assets/icons/factory.png";
 import maps from "@/assets/icons/maps-global-01.png";
 import leaf from "@/assets/icons/leaf-01.png";
 import vegeterian from "@/assets/icons/vegetarian-food.png";
+import location from "@/assets/icons/location.svg";
+import call from "@/assets/icons/call.svg";
+import mails from "@/assets/icons/mail.svg";
+import arrowDown from '@/assets/icons/arrow-down.svg'
 
 export const assets = {
   images: {
@@ -91,6 +96,7 @@ export const assets = {
     food13,
     food14,
     food15,
+    map,
   },
   icons: {
     hamburger: "/icons/hamburger.svg",
@@ -110,5 +116,9 @@ export const assets = {
     maps,
     leaf,
     vegeterian,
+    location,
+    call,
+    mails,
+    arrowDown
   },
 };

@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
 import { assets } from "@/assets/assets";
 
 interface TransformData {
@@ -16,7 +15,8 @@ const FruitsSlider: React.FC = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [transforms, setTransforms] = useState<TransformData[]>([]);
   const [scrollX, setScrollX] = useState(0);
-  const speed = 2; // Faster animation
+
+  const speed = 2;
 
   const images = [
     assets.images.fruitOne,
@@ -25,37 +25,38 @@ const FruitsSlider: React.FC = () => {
     assets.images.fruitFour,
     assets.images.fruitFive,
     assets.images.fruitSix,
-    assets.images.fruitSeven,
   ];
 
-  // Duplicate for seamless loop
   const duplicatedImages = [...images, ...images];
 
   useEffect(() => {
     let animationFrame: number;
 
-    const updateTransforms = () => {
+    const update = () => {
       if (!containerRef.current || !trackRef.current) {
-        animationFrame = requestAnimationFrame(updateTransforms);
+        animationFrame = requestAnimationFrame(update);
         return;
       }
 
       const container = containerRef.current;
       const track = trackRef.current;
+
       const containerRect = container.getBoundingClientRect();
       const centerX = containerRect.left + containerRect.width / 2;
 
-      // Move the track
-      let newScrollX = scrollX - speed;
-
-      // Loop the track seamlessly
+      // Move slider - infinite scroll
+      let newX = scrollX - speed;
       const totalWidth = track.scrollWidth / 2;
-      if (-newScrollX >= totalWidth) newScrollX = 0;
-      setScrollX(newScrollX);
 
-      // Update each item's transform
+      // Reset position when first set moves completely out of view
+      if (-newX >= totalWidth) {
+        newX += totalWidth;
+      }
+      setScrollX(newX);
+
+      // Update transforms manually
       const itemElements = container.querySelectorAll(".item");
-      const updatedTransforms: TransformData[] = [];
+      const updated: TransformData[] = [];
 
       itemElements.forEach((item) => {
         const rect = item.getBoundingClientRect();
@@ -65,74 +66,76 @@ const FruitsSlider: React.FC = () => {
         const normalized = distance / maxDistance;
         const absNorm = Math.abs(normalized);
 
-        // Scale: smallest at center, biggest at edges
         const minScale = 0.6;
         const maxScale = 1.5;
         const scale = minScale + absNorm * (maxScale - minScale);
 
-        // Tilt: toward center
         const maxTilt = 55;
         const tilt = -normalized * maxTilt;
 
-        // Depth
         const maxDepth = -120;
         const depth = absNorm * maxDepth;
 
-        updatedTransforms.push({ scale, tilt, depth });
+        updated.push({ scale, tilt, depth });
       });
 
-      setTransforms(updatedTransforms);
-      animationFrame = requestAnimationFrame(updateTransforms);
+      setTransforms(updated);
+
+      animationFrame = requestAnimationFrame(update);
     };
 
-    animationFrame = requestAnimationFrame(updateTransforms);
+    animationFrame = requestAnimationFrame(update);
     return () => cancelAnimationFrame(animationFrame);
-  }, [scrollX, speed]);
+  }, [scrollX]);
 
   return (
     <div
       ref={containerRef}
-      className="py-14 mx-auto flex gap-5 overflow-x-auto w-[1650px]"
+      className="py-14 mx-auto flex gap-1 md:gap-5 w-[1650px] min-w-[400px] max-w-full"
       style={{
-        overflow: "hidden", // Changed from overflow-x-auto to hidden for the 3D effect
+        overflow: "hidden",
         perspective: "1600px",
-        perspectiveOrigin: "center center",
         position: "relative",
       }}
     >
-      <motion.div
+      <div
         ref={trackRef}
         className="flex gap-5"
         style={{
-          x: scrollX,
+          transform: `translateX(${scrollX}px)`,
+          transition: "transform 0s linear",
         }}
       >
-        {duplicatedImages.map((imgSrc, index) => (
-          <motion.div
-            key={index}
-            className="item relative rounded-2xl overflow-hidden"
-            style={{
-              width: "200px",
-              height: "250px",
-              flexShrink: 0, // Prevent items from shrinking
-              transformStyle: "preserve-3d",
-            }}
-            animate={{
-              transform: transforms[index]
-                ? `translateZ(${transforms[index].depth}px) rotateY(${transforms[index].tilt}deg) scale(${transforms[index].scale})`
-                : "translateZ(0px) rotateY(0deg) scale(1)",
-            }}
-            transition={{ duration: 0.15 }}
-          >
-            <Image
-              src={imgSrc}
-              alt={`fruit-${index + 1}`}
-              fill
-              className="object-cover"
-            />
-          </motion.div>
-        ))}
-      </motion.div>
+        {duplicatedImages.map((img, index) => {
+          const t = transforms[index];
+
+          return (
+            <div
+              key={index}
+              className="item relative rounded-2xl overflow-hidden  w-[130px] h-[170px]
+             sm:w-[160px] sm:h-[210px]
+             md:w-[200px] md:h-[250px]"
+              style={{
+                // width: "200px",
+                // height: "250px",
+                flexShrink: 0,
+                transformStyle: "preserve-3d",
+                transform: t
+                  ? `translateZ(${t.depth}px) rotateY(${t.tilt}deg) scale(${t.scale})`
+                  : "translateZ(0px) rotateY(0deg) scale(1)",
+                transition: "transform 0.15s linear",
+              }}
+            >
+              <Image
+                src={img}
+                alt={`fruit-${index}`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

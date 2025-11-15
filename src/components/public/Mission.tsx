@@ -40,7 +40,7 @@ function Mission() {
           viewport={{ once: true }}
           className="flex-1 flex flex-col gap-5 items-center md:items-start"
         >
-          <Button className="py-3 px-3 h-6 flex items-center justify-center">
+          <Button className="py-3 px-3 h-6 flex items-center justify-center bg-[#0066271A]">
             Our Mission
           </Button>
           <h1 className="text-[#002E12] text-3xl font-semibold text-center md:text-left">
@@ -69,10 +69,16 @@ function Mission() {
           </motion.div>
           <Button
             varient="green"
-            className="p-6 h-12 flex items-center justify-center"
+            className="p-6 h-12 flex gap-2 items-center justify-center"
           >
             Our Vision{" "}
-            <i className="bx text-white bx-arrow-down-stroke text-2xl"></i>
+            <Image
+              src={assets.icons.arrowDown}
+              alt="arrow"
+              width={20}
+              height={20}
+              className="object-fit"
+            />
           </Button>
         </motion.div>
       </motion.div>
