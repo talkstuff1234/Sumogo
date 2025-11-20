@@ -9,6 +9,27 @@ import * as motion from "motion/react-client";
 function Vision() {
   return (
     <section className="bg-[#F4FBF7] w-full py-6 md:py-10 px-4 overflow-hidden">
+      <div className="absolute h-64">
+        <div
+          className="absolute -right-8 top-0"
+          style={{
+            width: "420px",
+            height: "320px",
+            borderRadius: "50%",
+            background: `radial-gradient(
+        circle,
+        rgba(27,146,73,0.18) 0%,    /* stronger visible center */
+        rgba(27,146,73,0.12) 25%,
+        rgba(27,146,73,0.07) 55%,
+        rgba(27,146,73,0.03) 75%,
+        #F4FBF7 100%
+      )`,
+            filter: "blur(10px)", // softer but more visible
+            transform: "rotate(-15deg)",
+          }}
+        />
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}

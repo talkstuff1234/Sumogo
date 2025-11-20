@@ -4,9 +4,11 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: ReactNode;
   varient?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 };
 
-function Button({ children, className, varient }: ButtonProps) {
+function Button({ children, className, varient, type, disabled }: ButtonProps) {
   const neutral: string =
     "bg-transparent text-[#049B3D] bg-white outline outline-1";
   const gray: string = "bg-[#E9E9E9] text-white";
@@ -27,7 +29,11 @@ function Button({ children, className, varient }: ButtonProps) {
   }
 
   return (
-    <button className={` rounded-full ${varientColor} ${className}`}>
+    <button
+      type={type}
+      disabled={disabled}
+      className={` rounded-full ${varientColor} ${className}`}
+    >
       {children}
     </button>
   );

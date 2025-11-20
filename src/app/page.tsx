@@ -1,4 +1,3 @@
-import CommunityForm from "@/components/public/CommunityForm";
 import Hero from "@/components/public/Hero";
 import Partner from "@/components/public/Partner";
 import About from "@/components/public/About";
