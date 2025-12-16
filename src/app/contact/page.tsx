@@ -129,8 +129,8 @@ export default function Contact() {
       icon: assets.icons.call.src,
       alt: "phone",
       title: "Phone",
-      detail: "+234-8130-4669-95",
-      href: "tel:+2348130466995",
+      detail: "+234-906-690-2793",
+      href: "tel:+2349066902793",
       description: "Call us directly",
     },
     {
