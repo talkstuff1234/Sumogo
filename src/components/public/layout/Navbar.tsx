@@ -179,7 +179,7 @@ function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="inline-block bg-green-600 hover:bg-green-700 text-white font-medium rounded-full transition-all duration-200"
+              className="inline-block bg-green-600 hover:bg-green-700 p-4 text-white font-medium rounded-full transition-all duration-200"
             >
               Contact Us
             </Link>
