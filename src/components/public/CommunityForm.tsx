@@ -140,7 +140,7 @@ function CommunityForm() {
             {/* Status Message */}
             {status.message && (
               <div
-                className={`mt-3 p-3 rounded-lg text-center text-sm ${
+                className={`mt-3 p-4 rounded-lg text-center text-sm ${
                   status.type === "success"
                     ? "bg-green-100 text-green-800 border border-green-200"
                     : "bg-red-100 text-red-800 border border-red-200"
