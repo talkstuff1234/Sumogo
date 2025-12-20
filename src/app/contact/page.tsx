@@ -163,7 +163,7 @@ export default function Contact() {
               Contact / Partner <span className="text-[#04AA42]">With Us</span>
             </h1>
             <p className="text-white max-w-[800px] mt-6">
-              {`Let's grow together. Whether you're a distributor, importer, retailer, or investor, Sumogo is your trusted link to Africa's thriving fresh and processed agro-export sector.`}
+              {`Let's grow together. Whether you're a distributor, importer, retailer, or investor, Sumogo is your trusted link to Africa's thriving fresh and processed agro-export sector`}
             </p>
           </div>
           <div className="flex flex-wrap gap-6 justify-center md:justify-between items-center w-full max-w-[1000px] mt-8 mx-auto px-3">
