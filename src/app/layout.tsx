@@ -19,72 +19,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          minHeight: "100vh",
-          backgroundColor: "#f9fafb",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "2rem",
-        }}
-      >
+      <body className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
         {/* ===============================
-            TEMPORARY SERVICE NOTICE
+            GENERIC ACCESS ERROR
             =============================== */}
-        <div
-          style={{
-            maxWidth: "760px",
-            width: "100%",
-            backgroundColor: "#ffffff",
-            padding: "3.5rem",
-            borderRadius: "16px",
-            boxShadow: "0 14px 35px rgba(0,0,0,0.08)",
-            textAlign: "center",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "2.3rem",
-              fontWeight: 600,
-              marginBottom: "1.2rem",
-            }}
-          >
-            Website Temporarily Unavailable
+        <div className="max-w-xl w-full bg-white rounded-2xl shadow-lg p-10 text-center">
+          <h1 className="text-4xl font-semibold text-gray-900 mb-4">
+            401 — Page Not Accessible
           </h1>
 
-          <p
-            style={{
-              fontSize: "1.05rem",
-              color: "#4b5563",
-              marginBottom: "1.6rem",
-            }}
-          >
-            This website is currently offline due to an unresolved contractual
-            matter related to its development and deployment.
+          <p className="text-gray-600 mb-6">
+            The requested page could not be loaded due to an authorization or
+            configuration issue.
           </p>
 
-          <p
-            style={{
-              fontSize: "0.95rem",
-              color: "#6b7280",
-              marginBottom: "2.2rem",
-              lineHeight: 1.6,
-            }}
-          >
-            Access to the full platform will be restored once the outstanding
-            obligations required for continued service are fulfilled.
+          <p className="text-sm text-gray-500 mb-8 leading-relaxed">
+            This may be caused by temporary access restrictions, expired
+            credentials, or a server configuration change. Please try again
+            later.
           </p>
 
-          <p
-            style={{
-              fontSize: "0.85rem",
-              color: "#9ca3af",
-            }}
-          >
-            If you are the site owner or an authorized representative, please
-            contact the developer directly to resolve this matter.
-          </p>
+          <div className="text-xs text-gray-400">
+            If you are the site administrator, verify access permissions or
+            contact support.
+          </div>
 
           {/* ===============================
               ORIGINAL STRUCTURE (REFERENCE)
